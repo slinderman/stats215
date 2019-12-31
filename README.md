@@ -16,3 +16,4 @@ You should be comfortable with the basics of probability at the level of STAT116
  
  # Tentative Schedule
  
+ TODO
