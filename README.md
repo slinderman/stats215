@@ -28,15 +28,15 @@ You should be comfortable with the basics of probability at the level of STAT116
 | 7 | Jan 28 | Discrete Latent Variable Models (LVM's) |
 | 8 | Jan 30 | Expectation Maximization <br> **<font color="red">HW1 Due &middot; HW2 Out</font>** |
 | 9 | Feb 4 | Linear Gaussian LVM's |
-| 10 | Feb 6 | **<font color="red">Midterm Exam</font>** |
-| 11 | Feb 11 | Variational Inference and vEM \citep{blei2017variational} |
-| 12 | Feb 13 | Variational Autoencoders (VAE's) <br> **<font color="red">HW2 Due &middot; HW3 Out</font>** |
-| 13 | Feb 18 | Markov Chains | 
-| 14 | Feb 20 | Hidden Markov Models |
-| 15 | Feb 25 | Linear Gaussian Dynamical Systems |
-| 16 | Feb 27 | Switching Linear Dynamical Systems <br> **<font color="red">HW3 Due &middot; HW4 Out</font>** |
-| 17 | Mar 3 | Sequential, Structured VAE's |
-| 18 | Mar 5 | Poisson Processes |
-| 19 | Mar 10 | Gaussian Processes |
-| 20 | Mar 12 | Hawkes Processes and Log Gaussian Cox Processes <br> **<font color="red">HW4 Due</font>** |
+| &mdash; | Feb 6 | **<font color="red">Midterm Exam</font>** |
+| 10 | Feb 11 | Variational Inference and vEM \citep{blei2017variational} |
+| 11 | Feb 13 | Variational Autoencoders (VAE's) <br> **<font color="red">HW2 Due &middot; HW3 Out</font>** |
+| 12 | Feb 18 | Markov Chains | 
+| 13 | Feb 20 | Hidden Markov Models |
+| 14 | Feb 25 | Linear Gaussian Dynamical Systems |
+| 15 | Feb 27 | Switching Linear Dynamical Systems <br> **<font color="red">HW3 Due &middot; HW4 Out</font>** |
+| 16 | Mar 3 | Sequential, Structured VAE's |
+| 17 | Mar 5 | Poisson Processes |
+| 18 | Mar 10 | Gaussian Processes |
+| 19 | Mar 12 | Hawkes Processes and Log Gaussian Cox Processes <br> **<font color="red">HW4 Due</font>** |
 | &mdash; | Mar 20 | **<font color="red">Final Report Due</font>** |
