@@ -24,7 +24,7 @@ You should be comfortable with the basics of probability at the level of STAT116
 | 5 | Jan 21 | Generalized Linear Models and Exponential Family Distributions |
 | 6 | Jan 23 | Graphical Models |
 | 7 | Jan 28 | Discrete Latent Variable Models (LVM's) |
-| 8 | Jan 30 | Expectation Maximization *HW1 Due; HW2 Out* |
+| 8 | Jan 30 | Expectation Maximization **<font color="red">HW1 Due; HW2 Out</font>** |
 | 9 | Feb 4 | Linear Gaussian LVM's |
 | 10 | Feb 6 | *Midterm Exam* |
 | 11 | Feb 11 | Variational Inference and vEM \citep{blei2017variational} |
