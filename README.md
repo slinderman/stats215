@@ -1,3 +1,5 @@
+# Statistical Models in Biology
+
 STATS215 	&middot; Winter 2020 &middot; Stanford University
 
 ## Course Description
