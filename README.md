@@ -37,4 +37,4 @@ You should be comfortable with the basics of probability at the level of STAT116
 | 18 | Mar 5 | Poisson Processes |
 | 19 | Mar 10 | Gaussian Processes |
 | 20 | Mar 12 | Hawkes Processes and Log Gaussian Cox Processes <br> **<font color="red">HW4 Due</font>** |
-| -- | Mar 20 | **<font color="red">Final Report Due</font>** |
+| &mdash; | Mar 20 | **<font color="red">Final Report Due</font>** |
