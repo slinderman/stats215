@@ -16,7 +16,7 @@ You should be comfortable with the basics of probability at the level of STAT116
 # Tentative Schedule
 
 | Lecture |  Date | Title |
-| --------|:-----:|-------|
+| :------:|:-----:|-------|
 | 1 | Jan 7 | Probability Review (Discrete and Continuous Distributions) |
 | 2 | Jan 9 | Probability Review (Multivariate Distributions, MLE) |
 | 3 | Jan 14 | Linear Models for Regression | 
@@ -26,7 +26,7 @@ You should be comfortable with the basics of probability at the level of STAT116
 | 7 | Jan 28 | Discrete Latent Variable Models (LVM's) |
 | 8 | Jan 30 | Expectation Maximization <br> **<font color="red">HW1 Due; HW2 Out</font>** |
 | 9 | Feb 4 | Linear Gaussian LVM's |
-| 10 | Feb 6 | **Midterm Exam** |
+| 10 | Feb 6 | **<font color="red">Midterm Exam</font>** |
 | 11 | Feb 11 | Variational Inference and vEM \citep{blei2017variational} |
 | 12 | Feb 13 | Variational Autoencoders (VAE's) <br> **<font color="red">HW2 Due; HW3 Out</font>** |
 | 13 | Feb 18 | Markov Chains | 
