@@ -22,7 +22,7 @@ You should be comfortable with the basics of probability at the level of STAT116
 | 1 | Jan 7 | Probability Review (Discrete and Continuous Distributions) |
 | 2 | Jan 9 | Probability Review (Multivariate Distributions, MLE) |
 | 3 | Jan 14 | Linear Models for Regression | 
-| 4 | Jan 16 | Linear Models for Classification *HW1 Out* | 
+| 4 | Jan 16 | Linear Models for Classification <br> **<font color="red">HW1 Out</font>** | 
 | 5 | Jan 21 | Generalized Linear Models and Exponential Family Distributions |
 | 6 | Jan 23 | Graphical Models |
 | 7 | Jan 28 | Discrete Latent Variable Models (LVM's) |
