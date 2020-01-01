@@ -20,20 +20,20 @@ You should be comfortable with the basics of probability at the level of STAT116
 | Lecture |  Date  | Topic | Suggested Readings |
 | :------:|:------:|-------|--------------------|
 | 1       | Jan 7  | Probability Review | Bishop (2006) Ch 2 <br> Murphy (2013) Ch 2|
-| 2       | Jan 9  | Graphical Models, Learning, and Inference | Barber (2010) Ch 3 and 4|
-| 3       | Jan 14 | Linear and Generalized Linear Models | Bishop (2006) Ch 3 and 4  <br> Murphy (2013) Ch 7-9 <br> |
+| 2       | Jan 9  | Graphical Models, Learning, and Inference | Barber (2010) Ch 3 and 4 <br> Wainwright and Jordan (2008) Ch 2|
+| 3       | Jan 14 | Linear and Generalized Linear Models | Bishop (2006) Ch 3 and 4  <br> Hastie et al (2009) Ch 3 and 4 <br> Murphy (2013) Ch 7-9 |
 | 4       | Jan 16 | Autoregressive Models <br> **<font color="red">HW1 Out</font>** | Pillow et al (2008) <br> Larochelle and Murray (2011) <br> van den Oord (2016a, 2016b) |
 | 5       | Jan 21 | Latent Variable Models: Mixtures and Factors | | 
 | 6       | Jan 23 | Expectation Maximization | | 
-| 7       | Jan 28 | Models of Networks and Tensors | Williams et al (2017) |
+| 7       | Jan 28 | Models of Networks and Tensors | Gopalan and Blei (2013) <br> Williams et al (2017) |
 | 8       | Jan 30 | Variational Inference and vEM <br> **<font color="red">HW1 Due &middot; HW2 Out</font>** | Blei et al (2017) |
 | 9       | Feb 4  | Variational Autoencoders (VAE's) | Rezende et al (2014) <br> Kingma and Welling (2014) |
 | &mdash; | Feb 6  | **<font color="red">Midterm Exam</font>** | |
-| 10      | Feb 11 | Markov Chains | |
+| 10      | Feb 11 | Markov Chains | Ewens and Grant (2005) Ch 4 <br> Robert and Casella (2004) Ch 4|
 | 11      | Feb 13 | Hidden Markov Models <br> **<font color="red">HW2 Due &middot; HW3 Out</font>** | Wiltschko et al (2015) |
 | 12      | Feb 18 | Linear Gaussian Dynamical Systems | Barber (2010) Ch 24 <br> Murphy (2013) Ch 18 <br> Macke et al (2013) |
-| 13      | Feb 20 | Switching Linear Dynamical Systems <br> **<font color="red">Project Proposal Due</font>** | Barber (2010) Ch 25 <br>  Linderman et al (2017) |
-| 14      | Feb 25 | Gaussian Processes | Rasmussen and Williams (2006) Ch 2 |
+| 13      | Feb 20 | Switching Linear Dynamical Systems <br> **<font color="red">Project Proposal Due</font>** | Barber (2010) Ch 25 <br>  Linderman et al (2017, 2019) |
+| 14      | Feb 25 | Gaussian Processes | Rasmussen and Williams (2006) Ch 2 <br> Hensman et al (2013) <br> Wu et al (2017) |
 | 15      | Feb 27 | Poisson Processes <br> **<font color="red">HW3 Due &middot; HW4 Out</font>** | Kingman (1993) Ch 1 and 2|
 | 16      | Mar 3  | Guest Lecture: Structured, Sequential VAE's | Johnson et al (2016) <br> Gao et al (2016) <br> Pandarinath et al (2017) |
 | 17      | Mar 5  | Continuous Time Markov Chains | |
@@ -42,4 +42,25 @@ You should be comfortable with the basics of probability at the level of STAT116
 | &mdash; | Mar 20 | **<font color="red">Final Report Due</font>** | |
 
 # References
+
+## Textbooks
+[Barber, D. (2012). _Bayesian reasoning and machine learning_. Cambridge University Press.](http://web4.cs.ucl.ac.uk/staff/D.Barber/textbook/090310.pdf)
+
+[Bishop, C. M. (2006). _Pattern recognition and machine learning_. Springer.](https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf)
+
+[Hastie, T., Tibshirani, R., & Friedman, J. (2009). _The elements of statistical learning: data mining, inference, and prediction_. Springer-Verlag.](https://web.stanford.edu/~hastie/ElemStatLearn/)
+
+[Kingman, J. F. C. (1993). _Poisson processes_. Clarendon Press.](https://www.amazon.com/Poisson-Processes-Oxford-Studies-Probability/dp/0198536933)
+_Available in library_
+
+[MacKay, D. J. (2003). _Information theory, inference and learning algorithms_. Cambridge university press.](http://www.inference.org.uk/itprnn/book.pdf)
+
+[Murphy, K. P. (2012). _Machine learning: a probabilistic perspective_. MIT press.](https://www.cs.ubc.ca/~murphyk/MLbook/) <br>
+_Available in library_
+
+[Williams, C. K., & Rasmussen, C. E. (2006). _Gaussian processes for machine learning_. MIT press.](http://www.gaussianprocess.org/gpml/)
+
+[Robert, C., & Casella, G. (2013). _Monte Carlo statistical methods_. Springer.](https://www.springer.com/gp/book/9780387212395)
+
+[Wainwright, M. J., & Jordan, M. I. (2008). Graphical models, exponential families, and variational inference. _Foundations and Trends® in Machine Learning_, 1(1–2), 1-305.](https://people.eecs.berkeley.edu/~wainwrig/Papers/WaiJor08_FTML.pdf)
 
