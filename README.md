@@ -23,9 +23,7 @@ You should be comfortable with the basics of probability at the level of STAT116
 | 2       | Jan 9  | Graphical Models, Learning, and Inference | Barber (2010) Ch 3 and 4 <br> Wainwright and Jordan (2008) Ch 2| |
 | 3       | Jan 14 | Linear and Generalized Linear Models | Bishop (2006) Ch 3 and 4  <br> Hastie et al (2009) Ch 3 and 4 <br> Murphy (2013) Ch 7-9 | |
 | 4       | Jan 16 | Autoregressive Models <br> **<font color="red">HW1 Out</font>** | Larochelle and Murray (2011) <br> van den Oord (2016a, 2016b) | Pillow et al (2008) |
-| 5       | Jan 21 | Latent Variable Models: Mixtures and Factors | 
-Murphy (2013) Ch 11 and 12 <br> Bishop Ch 9 and 12 | 
-Pachitariu et al (2016) <br> Mackevicius et al (2019) |
+| 5       | Jan 21 | Latent Variable Models: Mixtures and Factors | Murphy (2013) Ch 11 and 12 <br> Bishop Ch 9 and 12 | Pachitariu et al (2016) <br> Mackevicius et al (2019) |
 | 6       | Jan 23 | Expectation Maximization | | |
 | 7       | Jan 28 | Models of Networks and Tensors | Hoff et al (2002) <br> Gopalan and Blei (2013) | Williams et al (2017) <br> Linderman et al (2016) |
 | 8       | Jan 30 | Variational Inference and vEM <br> **<font color="red">HW1 Due &middot; HW2 Out</font>** | Blei et al (2017) | |
