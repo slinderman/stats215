@@ -50,7 +50,7 @@ You should be comfortable with the basics of probability at the level of STAT116
 
 [Hastie, T., Tibshirani, R., & Friedman, J. (2009). _The elements of statistical learning: data mining, inference, and prediction_. Springer-Verlag.](https://web.stanford.edu/~hastie/ElemStatLearn/)
 
-[Kingman, J. F. C. (1993). _Poisson processes_. Clarendon Press.](https://www.amazon.com/Poisson-Processes-Oxford-Studies-Probability/dp/0198536933)
+[Kingman, J. F. C. (1993). _Poisson processes_. Clarendon Press.](https://www.amazon.com/Poisson-Processes-Oxford-Studies-Probability/dp/0198536933) <br>
 _Available in library_
 
 [MacKay, D. J. (2003). _Information theory, inference and learning algorithms_. Cambridge university press.](http://www.inference.org.uk/itprnn/book.pdf)
