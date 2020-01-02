@@ -34,7 +34,7 @@ You should be comfortable with the basics of probability at the level of STAT116
 | 12      | Feb 18 | Linear Gaussian Dynamical Systems | Barber (2010) Ch 24 <br> Murphy (2013) Ch 18 <br>  | Paninski et al (2010) <br> Macke et al (2013) | 
 | 13      | Feb 20 | Switching Linear Dynamical Systems <br> **<font color="red">Project Proposal Due</font>** | Barber (2010) Ch 25 <br>  Linderman et al (2017) | Linderman et al (2019) <br> Taghia et al (2018) <br> Petreska et al (2011) |
 | 14      | Feb 25 | Gaussian Processes | Rasmussen and Williams (2006) Ch 2 <br> Hensman et al (2013) <br> Titsias and Lawerence (2010) <br> Wang et al (2019) | Cunningham et al (2008) <br> Wu et al (2017) |
-| 15      | Feb 27 | Poisson Processes <br> **<font color="red">HW3 Due &middot; HW4 Out</font>** | Kingman (1993) Ch 1 and 2| Truccolo et al (2005) <br> Cunningham et al (2010) | 
+| 15      | Feb 27 | Poisson Processes <br> **<font color="red">HW3 Due &middot; HW4 Out</font>** | Kingman (1993) Ch 1 and 2 <br> [Uri Eden's Notes](http://www.stat.columbia.edu/~liam/teaching/neurostat-fall19/uri-eden-point-process-notes.pdf) | Truccolo et al (2005) <br> Cunningham et al (2010) | 
 | 16      | Mar 3  | Guest Lecture: Structured, Sequential VAE's | Johnson et al (2016) | Gao et al (2016) <br> Pandarinath  et al (2017) |
 | 17      | Mar 5  | Continuous Time Markov Chains | | |
 | 18      | Mar 10 | Hawkes and Cox Processes | Linderman and Adams (2014) <br> Kingman (1993) Ch 6 | |
