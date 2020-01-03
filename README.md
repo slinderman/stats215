@@ -10,10 +10,29 @@ You should be comfortable with the basics of probability at the level of STAT116
 
 ## Logistics
  * Instructor: [Scott Linderman](http://slinderman.web.stanford.edu/)
- * Teaching Assistant: Kevin Han 
+ * Teaching Assistant: [Kevin Han](mailto:kevinwh@stanford.edu)
  * Lectures: Tuesday and Thursday, 12-1:20pm
  * Location: 540-108
- * Office Hours: TBD
+ * Office Hours: Tuesday 2-3pm (Scott) and TBD (Kevin)
+ 
+## Grading
+ * 4 Assignments: 15% each
+ * Midterm Exam: 15% 
+ * Final Project Proposal: 5%
+ * Final Project Report: 15%
+ * In-class Participation: 5% 
+ 
+*Late policy*: All assignments are due at 11:59pm PT on the due date.  You can turn in homework assignments up to a week late with a 50% penalty on your grade.  Final project reports will not be accepted after the deadline.  
+
+*Midterm*: The midterm will be given in class.
+
+## Final project
+
+The final project is an opportunity to apply these models and algorithms to datasets of interest to you.  Ideally, your project will involve some theory &ndash; extending a model to fit the needs of your particular problem and studying its properties &ndash; and some experimentation &ndash; fitting the model to biological data.  
+
+*Proposal*:  Start thinking about what datasets you'd like to study and what questions you'd like to answer early!  These will inform your choices about modeling tools.  As a forcing function, part of your grade will be based on your proposal, which is due roughly a month before the final report.  By this point, you should have a pretty clear idea about the dataset and question, and some initial thoughts about the types of models you will explore and experiments you will run.
+
+*Report*: The final report will present your theoretical work and experimental results.  It should look like the start of a research paper.  To that end, you will write it in the NeurIPS paper format, and you will submit a link to a GitHub repository with supporting code.
  
 # Tentative Schedule
 
