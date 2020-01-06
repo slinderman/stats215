@@ -65,6 +65,9 @@ The final project is an opportunity to apply these models and algorithms to data
 
 [Bishop, C. M. (2006). _Pattern recognition and machine learning_. Springer.](https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf)
 
+[Ewens, W. J., & Grant, G. (2005). Statistical Methods in Bioinformatics. Springer.](https://www.springer.com/gp/book/9780387400822) <br>
+_Available in library_
+
 [Goodfellow, I., Bengio, Y., & Courville, A. (2016). _The deep learning book._ MIT Press.](http://www.deeplearningbook.org/)
 
 [Hastie, T., Tibshirani, R., & Friedman, J. (2009). _The elements of statistical learning: data mining, inference, and prediction_. Springer-Verlag.](https://web.stanford.edu/~hastie/ElemStatLearn/)
