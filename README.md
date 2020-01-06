@@ -34,7 +34,7 @@ The final project is an opportunity to apply these models and algorithms to data
 
 *Report*: The final report will present your theoretical work and experimental results.  It should look like the start of a research paper.  To that end, you will write it in the NeurIPS paper format, and you will submit a link to a GitHub repository with supporting code.
  
-# Tentative Schedule
+# Anticipated Schedule
 
 | Lecture |  Date  | Topic | Technical Readings | Applications |
 | :------:|:------:|-------|--------------------|--------------|
