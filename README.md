@@ -17,9 +17,9 @@ You should be comfortable with the basics of probability at the level of STAT116
  
 ## Grading
  * 4 Assignments: 15% each
- * Midterm Exam: 15% 
+ * Midterm Exam: 10% 
  * Final Project Proposal: 5%
- * Final Project Report: 15%
+ * Final Project Report: 20%
  * In-class Participation: 5% 
  
 *Late policy*: All assignments are due at 11:59pm PT on the due date.  You can turn in homework assignments up to a week late with a 50% penalty on your grade.  Final project reports will not be accepted after the deadline.  
