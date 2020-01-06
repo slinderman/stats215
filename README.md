@@ -34,6 +34,9 @@ The final project is an opportunity to apply these models and algorithms to data
 
 *Report*: The final report will present your theoretical work and experimental results.  It should look like the start of a research paper.  To that end, you will write it in the NeurIPS paper format, and you will submit a link to a GitHub repository with supporting code.
  
+## Readings 
+The readings are meant to supplement lecture with further details and show examples of how different models are being used in biology.  I've listed multiple technical readings and applications &ndash; you do **not** have to read all of them.  You may find it helpful to see the same concepts presented in different ways, or you may find that you like some author's style better than others.
+ 
 # Anticipated Schedule
 
 | Lecture |  Date  | Topic | Technical Readings | Applications |
