@@ -13,7 +13,9 @@ You should be comfortable with the basics of probability at the level of STAT116
  * Teaching Assistant: [Kevin Han](mailto:kevinwh@stanford.edu)
  * Lectures: Tuesday and Thursday, 12-1:20pm
  * Location: 540-108
- * Office Hours: Tuesday 2-3pm Sequoia Hall Rm 232 (Scott) and TBD (Kevin)
+ * Office Hours: 
+   * Scott: Tuesday 2-3pm Sequoia Hall Rm 232
+   * Kevin: Monday 3-5pm Sequoia Hall Library
  
 ## Grading
  * 4 Assignments: 15% each
