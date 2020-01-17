@@ -28,6 +28,11 @@ You should be comfortable with the basics of probability at the level of STAT116
 
 *Midterm*: The midterm will be given in class.
 
+## Assignments
+Assignments consist of math problems and coding problems.  You will find a LaTeX template for your write-up in the GitHub folder.  Submit a pdf of your write-up and an .ipynb and .pdf of the Google Colab notebook with your completed coding assignment.  All submissions should be made through Canvas.
+
+ * [Assignment 1](https://github.com/slinderman/stats215/tree/master/assignment1)
+
 ## Final project
 
 The final project is an opportunity to apply these models and algorithms to datasets of interest to you.  Ideally, your project will involve some theory &ndash; extending a model to fit the needs of your particular problem and studying its properties &ndash; and some experimentation &ndash; fitting the model to biological data.  
