@@ -1,0 +1,131 @@
+\documentclass[11pt]{article}
+
+\input{preamble/preamble.tex}
+\input{preamble/preamble_math.tex}
+\input{preamble/preamble_acronyms.tex}
+
+\title{STAT215: Assignment 1}
+% \author{Your Name Here}
+\date{Due: January 30, 2020 at 11:59pm PT}
+
+\begin{document}
+
+\maketitle
+
+\textbf{Problem 1:}  \textit{The negative binomial distribution.} 
+
+Consider a coin with probability~$p$ of coming up heads.  The number of coin flips before seeing a `tails' follows a geometric distribution with pmf
+\begin{align*}
+    \Pr(X=k; p) &= p^k \, (1-p).
+\end{align*}
+The number of coin flips before seeing~$r$ tails follows a \emph{negative binomial} distribution with parameters~$r$ and~$p$.
+
+\begin{enumerate}[label=(\alph*)]
+    \item Derive the probability mass function~$\Pr(X=k; r, p)$ of the negative binomial distribution.  Explain your reasoning.
+    
+    \item The geometric distribution has mean~$p / (1-p)$ and variance~$p / (1-p)^2$.  Compute the mean and variance of the negative binomial distribution.  Plot the variance as a function of the mean for fixed~$p$ and varying~$r$.  How does this compare to the Poisson distribution?
+    
+    \item Rewrite the negative binomial pmf in terms of the mean~$\mu$ and the dispersion parameter~$r$.  Show that as~$r \to \infty$ with~$\mu$ fixed, the negative binomial converges to a Poisson distribution with mean~$\mu$.
+    
+    \item The gamma distribution is a continuous distribution on~$(0, \infty)$ with pdf
+    \begin{align*}
+        p(x; \alpha, \beta) &= \frac{\beta^\alpha}{\Gamma(\alpha)} x^{\alpha -1} e^{-\beta x},
+    \end{align*}
+    where~$\Gamma(\cdot)$ denotes the gamma function, which has the property that~$\Gamma(n) = (n-1)!$ for positive integers~$n$.  Show that the negative binomial is the marginal distribution over~$X$ where~${X \sim \mathrm{Poisson}(\mu)}$ and~${\mu \sim \mathrm{Gamma}(r, (1-p)/p )}$, integrating over~$\mu$.  In other words, show that the negative binomial is equivalent to an infinite mixture of Poissons with gamma mixing measure. 
+    
+    \item  Suppose~$X_n \sim \mathrm{NB}(r, p)$ for~$n=1, \ldots, N$ are independent samples of a negative binomial distribution.  Write the log likelihood~$\cL(r, p)$.  Solve for the maximum likelihood estimate (in closed form) of~$\hat{p}$ for fixed~$r$.  Plug this into the log likelihood to obtain the profile likelihood~$\cL(r, \hat{p}(r))$ as a function of~$r$ alone.  
+
+\end{enumerate}
+
+\clearpage
+
+
+\textbf{Problem 2:}  \textit{The multivariate normal distribution.} 
+
+\begin{enumerate}[label=(\alph*)]
+
+\item In class we introduced a multivariate Gaussian distribution via its representation as a linear transformation~$x = Az + \mu$ where~$z$ is a vector of independent standard normal random variates.  Using the change of variables formula, derive the multivariate Gaussian pdf,
+\begin{align*}
+    p(x; \mu, \Sigma) &= (2 \pi)^{-D/2} |\Sigma|^{-1/2} \exp \left\{ -\frac{1}{2} (x - \mu)^\trans \Sigma^{-1} (x- \mu) \right\},
+\end{align*}
+where~$\mu \in \reals^D$ and $\Sigma = AA^\top \in \reals^{D \times D}$ is a positive semi-definite covariance matrix.
+
+\item Let~$r = \|z\|_2 = (\sum_{d=1}^D z_d^2)^{1/2}$ where~$z$ is a vector of standard normal variates, as above.  We will derive its density function. 
+\begin{enumerate}[label=(\roman*)]
+    \item Start by considering the~$D=2$ dimensional case and note that~$p(r) \, \mathrm{d}r$ equals the probability mass assigned by the multivariate normal distribution to the infinitesimal shell at radius~$r$ from the origin.  
+    
+    \item Generalize your solution to $D > 2$ dimensions, using the fact that the surface area of the $D$-dimensional ball with radius $r$ is $2r^{D-1} \pi^{D/2} / \Gamma(D/2)$.
+    
+    \item Plot this density for increasing values of dimension~$D$. What does this tell your about the distribution of high dimensional Gaussian vectors?  
+    \item Now use another change of variables to derive the pdf of~$r^2$, the sum of squares of the Gaussian variables. The squared 2-norm follows a $\chi^2$ distribution with $D$ degrees of freedom. Show that it is a special case of the gamma distribution introduced in Problem 1.
+    
+\end{enumerate}
+
+
+\item Rewrite the multivariate Gaussian density in natural exponential family form with parameters~$J$ and $h$.  How do its natural parameters relate to its mean parameters~$\mu$ and~$\Sigma$? What are the sufficient statistics of this exponential family distribution?  What is the log normalizer?  Show that the derivatives of the log normalizer yield the expected sufficient statistics. 
+
+\item  Consider a directed graphical model on a collection of scalar random variables $(x_1, \ldots, x_D)$.  Assume that each variable $x_d$ for~$d > 1$ has exactly one parent in the directed graphical model, and let the index of the parent of~$x_d$ be denoted by~$\mathsf{par}_d \in \{1, \ldots, d-1\}$.  The joint distribution is then given by,
+\begin{align*}
+    x_1 &\sim \cN(0, \beta^{-1}), \\
+    x_{d} &\sim \cN(x_{\mathsf{par}_d} + b_d; \beta^{-1}) \qquad \text{ for } d=2, \ldots, D.
+\end{align*}
+The parameters of the model are~$\beta, \{b_d\}_{d=2}^D$.  Show that the joint distribution is a multivariate Gaussian and find a closed form expression the precision matrix, $J$.  How does the precision matrix change in the two-dimensional model where each~$x_d \in \reals^2$, $\beta^{-1}$ is replaced by $\beta^{-1}I$, and $b_d \in \reals^2$?
+
+\end{enumerate}
+
+\clearpage
+
+\textbf{Problem 3:} \textit{Bayesian linear regression.}  
+
+Consider a regression problem with datapoints~$(x_n, y_n) \in \reals^{D} \times \reals$. We begin with a linear model,
+\begin{align*}
+    y_n = w^\trans x_n + \epsilon_n;  \quad \epsilon_n \sim \cN(0, \beta^{-1}),
+\end{align*}
+where~$w \in \reals^{D}$ is a vector of regression weights and~$\beta \in \reals_+$ specifies the precision (inverse variance) of the errors~$\epsilon_n$. 
+
+\begin{enumerate}[label=(\alph*)]
+
+\item Assume a standard normal prior $w_i \sim \cN(0, \alpha^{-1})$.  Compute the marginal likelihood
+\begin{align*}
+    p(\{x_n, y_n\}_{n=1}^N; \alpha, \beta) &= \int p(w; \alpha) \, p(\{(x_n, y_n)\}_{n=1}^N \mid w; \beta) \, \mathrm{d}w.
+\end{align*}
+
+\item Now consider a ``spike-and-slab'' prior distribution on the entries of~$w$.  Let~$z \in \{0, 1\}^{D}$ be a binary vector specifying whether the corresponding entries in~$w$ are nonzero.  That is, if~$z_{i}=0$ then~$w_{i}$ is deterministically zero; otherwise,~$w_{i} \sim \cN(0, \alpha^{-1})$ as above.  We can write this as a degenerate Gaussian prior
+\begin{align*}
+    p(w \mid z) &= \prod_{i=1}^{D} \cN(w_{i} \mid 0, z_{i} \alpha^{-1}).
+\end{align*}
+Compute the marginal likelihood~$p(\{(x_n, y_n)\}_{n=1}^N \mid z, \alpha, \beta)$.  How would you find the value of~$z$ that maximizes this likelihood?
+
+\item Suppose that each datapoint has its own precision~$\beta_n$.  Compute the posterior distribution
+\begin{align*}
+    p(w \mid \{(x_n, y_n, \beta_n)\}_{n=1}^N, \alpha).
+\end{align*}
+How does the posterior mean compare to the ordinary least squares estimate?
+
+\item Finally, assume the per-datapoint precisions~$\beta_n$ are not directly observed, but are assumed to be independently sampled from a gamma prior distribution,
+\begin{align*}
+    \beta_n &\sim \mathrm{Gamma}(a, b),
+\end{align*}
+which has the property that~$\E[\beta_n] = a/b $ and $\E[\ln \beta_n] = \psi(a) - \ln b$ where~$\psi$ is the digamma function.  Then, the errors~$\epsilon_n$ are marginally distributed according to the Student's t distribution, which has heavier tails than the Gaussian and hence is more robust to outliers. 
+
+Compute the conditional distribution $p(\beta_n \mid x_n, y_n, w, a, b)$, and compute the expected log joint 
+\begin{align*}
+    \cL(w') &= \E_{p(\beta_n \,|\, x_n, y_n, w, a, b)} \left[ \log p(\{(x_n, y_n, \beta_n)\}_{n=1}^N, w'; \alpha, a, b) \right].
+\end{align*}
+What value of~$w$ maximizes the expected log joint probability?  Describe an EM procedure to search for,
+\begin{align*}
+    w^* &= \argmax p(w \mid \{(x_n, y_n)\}_{n=1}^N, \alpha, a, b).
+\end{align*}
+
+\end{enumerate}
+
+\clearpage
+
+\textbf{Problem 4:} \textit{Multiclass logistic regression applied to larval zebrafish behavior data.}  
+
+Follow the instructions in this Google Colab notebook to implement a multiclass logistic regression model and fit it to larval zebrafish behavior data from a recent paper: 
+\url{https://colab.research.google.com/drive/1moN5CYNsyxeOSUOmN-QMyqEZwgLSBsjY}.  Once you're done, save the notebook in \texttt{.ipynb} format, print a copy in \texttt{.pdf} format,
+and submit these files along with the rest of your written assignment.
+
+
+\end{document}
