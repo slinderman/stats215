@@ -71,8 +71,7 @@ The readings are meant to supplement lecture with further details and show examp
 | 18      | Mar 10  | Continuous Time Markov Chains | | Complex synapses: [Lahiri and Ganguli (2013)](https://ganguli-gang.stanford.edu/pdf/Synapse.NIPS14.pdf) and [Supp](https://ganguli-gang.stanford.edu/pdf/Synapse.NIPS14.Supp.pdf) |
 | 19      | Mar 12 | Hawkes and Cox Processes <br> **<font color="red">HW4 Due</font>**  | [Hawkes (1971)](https://www.jstor.org/stable/2334319?seq=1#metadata_info_tab_contents) <br> Kingman (1993) Ch 6 | Social contagion: [Linderman and Adams (2014)](http://proceedings.mlr.press/v32/linderman14.pdf) |
 | &mdash; | Mar 20 | **<font color="red">Final Report Due</font>** | | |
-<!-- | 10      | Feb 11 | Markov Chains | Robert and Casella (2004) Ch 4| DNA sequence analysis: Ewens and Grant (2005) Ch 12 | -->
-<!-- | 19      | Mar 12 | Kingman's Coalescent | [Kingman (1982)](https://www.sciencedirect.com/science/article/pii/0304414982900114) <br> [Norborg (2004)](https://onlinelibrary.wiley.com/doi/10.1002/0470022620.bbc21) | Inferring changes in population size: [Palacios et al (2015)](https://www.genetics.org/content/genetics/201/1/281.full.pdf)| -->
+
 
 # Textbooks
 [Barber, D. (2012). _Bayesian reasoning and machine learning_. Cambridge University Press.](http://web4.cs.ucl.ac.uk/staff/D.Barber/textbook/090310.pdf)
