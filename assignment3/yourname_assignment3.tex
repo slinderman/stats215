@@ -1,0 +1,155 @@
+\documentclass[11pt]{article}
+
+\input{preamble/preamble.tex}
+\input{preamble/preamble_math.tex}
+\input{preamble/preamble_acronyms.tex}
+
+\title{STAT215: Assignment 3}
+\author{Your Name}
+\date{Due: March 3, 2020}
+
+\begin{document}
+
+\maketitle
+
+\textbf{Problem 1:} \textit{Variational inference.} 
+
+Standard VI minimizes $\KL{q(z)}{p(z \mid x)}$, the Kullback-Leibler divergence from the variational approximation $q(z)$ to the true posterior $p(z \mid x)$.  In this problem we will develop some intuition for this optimization problem.  For further reference, see Chapter 10 of \textit{Pattern Recognition and Machine Learning} by Bishop.
+
+\begin{enumerate}[label=(\alph*)]
+    \item Let $\cQ = \{q(z): q(z) = \prod_{d=1}^D \cN(z_d \mid m_d, v_d^2)\}$ denote the set of Gaussian densities on $z \in \reals^D$ with diagonal covariance matrices.  Solve for 
+    \begin{align*}
+        q^\star &= \argmin_\cQ \KL{q(z)}{\cN(z \mid \mu, \Sigma)},
+    \end{align*}
+    where $\Sigma$ is an arbitrary covariance matrix.
+    
+    \begin{solution}
+    Your answer here.
+    \end{solution}
+    
+    \item Now solve for $q^\star \in \cQ$ that minimizes the KL in the opposite direction,
+    \begin{align*}
+        q^\star &= \argmin_\cQ \KL{\cN(z \mid \mu, \Sigma)}{q(z)}.
+    \end{align*}
+    
+    \begin{solution}
+    Your answer here.
+    \end{solution}
+    
+    \item Plot the contour lines of your solutions to parts (a) and (b) for the case where
+    \begin{align*}
+        \mu = \begin{bmatrix}0 \\ 0 \end{bmatrix}, \qquad
+        \Sigma = \begin{bmatrix} 1 & 0.9 \\ 0.9 & 1 \end{bmatrix}.
+    \end{align*}
+
+\end{enumerate}
+
+
+
+\clearpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\textbf{Problem 2:}  \textit{Variational autoencoders (VAE's)} 
+
+In class we derived VAE's as generative models~$p(x, z; \theta)$ of observations~$x \in \reals^P$ and latent variables~$z \in \reals^D$, with parameters~$\theta$.  We used variational expectation-maximization to learn the parameters~$\theta$ that maximize a lower bound on the marginal likelihood,
+\begin{align*}
+    \log p(x; \theta) \geq \sum_{n=1}^N \bbE_{q(z_n | x_n, \phi)}\left[\log p(x_n, z_n; \theta) - \log q(z_n \mid x_n, \phi) \right] \triangleq \cL(\theta, \phi).
+\end{align*}
+The difference between VAE's and regular variational expectation-maximization is that we constrained the variational distribution $q(z \mid x, \phi)$ to be a parametric function of the data; for example, we considered,
+\begin{align*}
+    q(z_n \mid x_n, \phi) &= \cN \left(z_n \mid \mu(x_n; \phi), \mathrm{diag}([\sigma_1^2(x_n; \phi), \ldots, \sigma_D^2(x_n; \phi)]) \right),
+\end{align*}
+where~$\mu: \reals^P \to \reals^D$ and $\sigma_d^2: \reals^P \to \reals_+$ are functions parameterized by~$\phi$ that take in a datapoint~$x_n$ and output means and variances of~$z_n$, respectively.  In practice, it is common to implement these functions with neural networks.  Here we will study VAE's in some special cases.  For further reference, see Kingma and Welling (2019), which is linked on the course website.
+
+\begin{enumerate}[label=(\alph*)]
+    \item Consider the linear Gaussian model factor model,
+    \begin{align*}
+        p(x_n, z_n; \theta) &= \cN(z_n; 0, I) \, \cN(x_n \mid A z_n, \, V),
+    \end{align*}
+    where~$A \in \reals^{P \times D}$, $V \in \reals^{P \times P}$ is a diagonal, positive definite matrix, and~$\theta = (A, V)$.  Solve for the true posterior~$p(z_n \mid x_n, \theta)$.
+    
+    \begin{solution}
+    Your answer here.
+    \end{solution}
+    
+    \item  Consider the variational family of Gaussian densities with diagonal covariance, as described above, and assume that~$\mu(x; \phi)$ and $\log \sigma_d^2(x; \phi)$ are linear functions of~$x$.  Does this family contain the true posterior?  Find the member of this variational family that maximizes~$\cL(\theta, \phi)$ for fixed $\theta$. (Hint: use your answer to Problem 1a.)
+    
+    \begin{solution}
+    Your answer here. 
+    \end{solution}
+    
+    \item Now consider a simple nonlinear factor model,
+    \begin{align*}
+        p(x_n, z_n; \theta) &= \cN(z_n \mid 0, I) \, \prod_{p=1}^P \cN(x_{np} \mid e^{a_p^\trans z_n}, v_p),
+    \end{align*}
+    parameterized by~$a_p \in \reals^D$ and~$v_p \in \reals_+$.  The posterior is no longer Gaussian, since the mean of~$x_{np}$ is a nonlinear function of the latent variable.\footnote{For this particular model, the expectations in~$\cL(\theta, \phi)$ can still be computed in closed form using the fact that~$\bbE[e^z] = e^{\mu + \frac{1}{2}\sigma^2}$ for $z \sim \cN(\mu, \sigma^2)$.}  
+    
+    Generate a synthetic dataset by sampling $N=1000$ datapoints from a $D=1$, $P=2$ dimensional model with~$A = [1.2, 1]^\trans$ and~$v_p = 0.1$ for $p=1,2$.  Use the reparameterization trick and automatic differentiation to perform stochastic gradient descent on~$-\cL(\theta, \phi)$.
+    
+    Make the following plots: 
+    \begin{itemize}
+        \item A scatter plot of your simulated data (with equal axis limits).
+        \item A plot of $\cL(\theta, \phi)$ as a function of SGD iteration. 
+        \item A plot of the model parameters~$(A_{11}, A_{21}, v_1, v_2)$ as a function of SGD iteration.
+        \item The approximate Gaussian posterior with mean $\mu(x; \phi)$ and variance~$\sigma_1^2(x; \phi)$ for $x \in \{(0, 0), (1, 1), (10, 7)\}$ using the learned parameters~$\phi$.
+        \item The true posterior at those points. (Since $z$ is one dimensional, you can compute the true posterior with numerical integration.)
+    \end{itemize}
+    Comment on your results.
+    
+    \begin{solution}
+    Your results here.
+    \end{solution}
+    
+\end{enumerate}
+
+\clearpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\textbf{Problem 3:} \textit{Semi-Markov models}
+
+Consider a Markov model as described in class and in, for example, Chapter 13 of \textit{Pattern Recogntion and Machine Learning} by Bishop,
+\begin{align*}
+    p(z_{1:T} \mid \pi, A) &= p(z_1 \mid \pi) \prod_{t=2}^T p(z_t \mid z_{t-1}, A),
+\end{align*}
+where~$z_t \in \{1, \ldots, K\}$ denotes the ``state,'' and
+\begin{align*}
+    p(z_1 = i) &= \pi_i \\
+    p(z_t = j \mid z_{t-1} = i, A) &= A_{ij}.
+\end{align*}
+We will study the distribution of state durations---the length of time spent in a state before transitioning.  Let $d \geq 1$ denote the number of time steps before a transition out of state $z_1$.  That is, $z_1 = i, \ldots, z_{d}=i$ for some~$i$, but $z_{d+1} \neq i$.
+
+\begin{enumerate}[label=(\alph*)]
+    \item Show that $p(d \mid z_1=i, A) = \mathrm{Geom}(d \mid p_i)$, the probability mass function of the geometric distribution.  Solve for the parameter~$p_i$ as a function of the transition matrix~$A$.
+    
+    \begin{solution}
+    Your answer here.
+    \end{solution}
+    
+    \item We can equivalently represent $z_{1:T}$ as a set of states and durations~$\{(\tilde{z}_n, d_n)\}_{n=1}^N$, where $\tilde{z}_n \in \{1, \ldots, K\} \setminus \{\tilde{z}_{n-1}\}$ denotes the index of the $n$-th visited state and $d_n \in \naturals$ denotes the duration spent in that state before transition.  There is a one-to-one mapping between states/durations and the original state sequence:
+    \begin{align*}
+        (z_1, \ldots, z_T) &= (\underbrace{\tilde{z}_1, \ldots, \tilde{z}_1}_{d_1\,\mathrm{times}}, \underbrace{\tilde{z}_2, \ldots, \tilde{z}_2}_{d_2\,\mathrm{times}}, \ldots \underbrace{\tilde{z}_N, \ldots, \tilde{z}_N}_{d_N\,\mathrm{times}}).
+    \end{align*}
+    Show that the probability mass function of the states and durations is of the form
+    \begin{align*}
+        p(\{(\tilde{z}_n, d_n)\}_{n=1}^N) &= p(\tilde{z}_1 \mid \pi) \left[ \prod_{n=1}^{N-1} p(d_n \mid \tilde{z}_n, A) \, p(\tilde{z}_{n+1} \mid \tilde{z}_n, A) \right] p(d_N \mid \tilde{z}_N, A),
+    \end{align*}
+    and derive each conditional probability mass function.
+    
+    \begin{solution}
+    Your answer here.
+    \end{solution}
+    
+    \item \emph{Semi-Markov} models replace $p(d_n \mid \tilde{z}_n)$ with a more flexible duration distribution.  For example, consider the model,
+    \begin{align*}
+        p(d_n \mid \tilde{z}_n) &= \mathrm{NB}(d_n \mid r, \theta_{\tilde{z}_n}),
+    \end{align*}
+    where $r \in \naturals$ and $\theta_k \in [0, 1]$ for $k=1,\ldots,K$.  Recall from Assignment 1 that the negative binomial distribution with integer~$r$ is equivalent to a sum of~$r$ geometric random variables.  Use this equivalence to write the semi-Markov model with negative binomial durations as a Markov model on an extended set of states~$s_n \in \{1, \ldots, Kr\}$.  Specifically, write the transition matrix for $p(s_n \mid s_{n-1})$ and the mapping from $s_n$ to $z_n$.
+    
+    \begin{solution}
+    Your answer here.
+    \end{solution}
+    
+\end{enumerate}
+
+
+\end{document}
