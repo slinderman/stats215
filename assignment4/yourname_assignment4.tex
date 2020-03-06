@@ -1,0 +1,43 @@
+\documentclass[11pt]{article}
+
+\input{preamble/preamble.tex}
+\input{preamble/preamble_math.tex}
+\input{preamble/preamble_acronyms.tex}
+
+\title{STAT215: Assignment 4}
+\author{Your Name}
+\date{Due: March 13, 2020}
+
+\begin{document}
+
+\maketitle
+
+\textbf{Problem 1:} Consider a Gaussian linear dynamical system (LDS),
+\begin{align*}
+    p(x_{1:T}, y_{1:T}) &= \cN(x_1 \mid 0, q^2) \left[ \prod_{t=2}^T \cN(x_t \mid a x_{t-1} + b, q^2) \right] 
+    \left[ \prod_{t=1}^T \cN(y_{t} \mid x_t, r^2) \right],
+\end{align*}
+for~$x_t, y_t \in \reals$ for all~$t$, and parameters~$a, b \in \reals$ and $q^2, r^2 \in \reals_+$.  
+Compute the forward filtered distribution~$p(x_t \mid y_{1:t})$ in terms of the model parameters 
+and the filtered distribution~$p(x_{t-1} \mid y_{1:t-1})$.  Solve for the base case~$p(x_1 \mid y_1)$.  
+For reference, consult the state space modeling chapters of either the Bishop or the Murphy textbook.
+
+\begin{solution}
+Your solution here.
+\end{solution}
+
+\clearpage 
+
+\textbf{Problem 2:} Sample a time series of length~$T=30$ from the Gaussian LDS in Problem 1 with parameters~$a=1, b=0, q=0.1, r=0.3$.  Plot the sample of~$x_{1:T}$ as a solid line, and plot the observed~$y_{1:T}$ as $\mathsf{+}$'s.  Write code to compute the filtered distribution~$p(x_t \mid y_{1:t})$ you derived in Problem 1.  Then plot the mean of the filtered distribution~$\bbE[x_t \mid y_{1:t}]$ over time as a solid line, and plot a shaded region encompassing the mean $\pm 2$ standard deviations of the filtered distribution.  All plots should be on the same axis.  Include a legend.
+
+Write your code in a Colab notebook and include a PDF printout of your notebook as well as the raw .ipynb file.
+
+\clearpage 
+
+\textbf{Problem 3:} Reproduce Figure 2.5 of Rasmussen and Williams, \textit{Gaussian Processes for Machine Learning}, available at \url{http://www.gaussianprocess.org/gpml/chapters/RW2.pdf}.  Use a randomly generated dataset as described in the figure caption and surrounding text. 
+
+Write your code in a Colab notebook and include a PDF printout of your notebook as well as the raw .ipynb file.
+
+
+
+\end{document}
