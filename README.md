@@ -34,6 +34,7 @@ Assignments consist of math problems and coding problems.  You will find a LaTeX
  * [Assignment 1](https://github.com/slinderman/stats215/tree/master/assignment1)
  * [Assignment 2](https://github.com/slinderman/stats215/tree/master/assignment2)
  * [Assignment 3](https://github.com/slinderman/stats215/tree/master/assignment3)
+ * [Assignment 4](https://github.com/slinderman/stats215/tree/master/assignment4)
 
 ## Final project
 
